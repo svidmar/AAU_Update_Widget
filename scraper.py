@@ -203,6 +203,15 @@ def generate_html(articles: list[dict], output_path: str = "index.html"):
             background: #e8e8e8;
         }}
 
+        .header {{
+            background: #211a52;
+            color: white;
+            padding: 20px 30px;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }}
+
         .grid {{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -210,7 +219,7 @@ def generate_html(articles: list[dict], output_path: str = "index.html"):
             gap: 12px;
             padding: 12px;
             width: 2632px;
-            height: 1222px;
+            height: calc(1222px - 76px);
         }}
 
         .article {{
@@ -237,7 +246,7 @@ def generate_html(articles: list[dict], output_path: str = "index.html"):
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 60px 25px 25px;
+            padding: 70px 25px 25px;
             background: linear-gradient(transparent, rgba(0,0,0,0.85));
             color: white;
         }}
@@ -245,32 +254,21 @@ def generate_html(articles: list[dict], output_path: str = "index.html"):
         /* Large articles (1st and 2nd) */
         .article:nth-child(1) .article-overlay,
         .article:nth-child(2) .article-overlay {{
-            padding: 80px 35px 35px;
+            padding: 90px 35px 35px;
         }}
 
         .article-title {{
-            font-size: 26px;
+            font-size: 32px;
             font-weight: 600;
-            line-height: 1.25;
-            margin-bottom: 8px;
+            line-height: 1.2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }}
 
         /* Large articles get bigger titles */
         .article:nth-child(1) .article-title,
         .article:nth-child(2) .article-title {{
-            font-size: 38px;
-            line-height: 1.2;
-        }}
-
-        .article-meta {{
-            font-size: 16px;
-            opacity: 0.85;
-        }}
-
-        .article:nth-child(1) .article-meta,
-        .article:nth-child(2) .article-meta {{
-            font-size: 20px;
+            font-size: 44px;
+            line-height: 1.15;
         }}
 
         .article a {{
@@ -281,6 +279,7 @@ def generate_html(articles: list[dict], output_path: str = "index.html"):
     </style>
 </head>
 <body>
+    <div class="header">News from AAU Update</div>
     <div class="grid">
 """
 
@@ -288,13 +287,11 @@ def generate_html(articles: list[dict], output_path: str = "index.html"):
         image = article.get("image", placeholder)
         title = article.get("title", "News Article")
         url = article.get("url", "#")
-        date = article.get("formatted_date", "")
 
         html += f"""        <div class="article">
             <img src="{image}" alt="{title}" loading="lazy" onerror="this.src='{placeholder}'">
             <div class="article-overlay">
                 <h2 class="article-title">{title}</h2>
-                <div class="article-meta">update.aau.dk &bull; {date}</div>
             </div>
             <a href="{url}" target="_blank" rel="noopener"></a>
         </div>

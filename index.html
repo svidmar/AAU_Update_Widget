@@ -20,6 +20,15 @@
             background: #e8e8e8;
         }
 
+        .header {
+            background: #211a52;
+            color: white;
+            padding: 20px 30px;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -27,7 +36,7 @@
             gap: 12px;
             padding: 12px;
             width: 2632px;
-            height: 1222px;
+            height: calc(1222px - 76px);
         }
 
         .article {
@@ -54,7 +63,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 60px 25px 25px;
+            padding: 70px 25px 25px;
             background: linear-gradient(transparent, rgba(0,0,0,0.85));
             color: white;
         }
@@ -62,32 +71,21 @@
         /* Large articles (1st and 2nd) */
         .article:nth-child(1) .article-overlay,
         .article:nth-child(2) .article-overlay {
-            padding: 80px 35px 35px;
+            padding: 90px 35px 35px;
         }
 
         .article-title {
-            font-size: 26px;
+            font-size: 32px;
             font-weight: 600;
-            line-height: 1.25;
-            margin-bottom: 8px;
+            line-height: 1.2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         /* Large articles get bigger titles */
         .article:nth-child(1) .article-title,
         .article:nth-child(2) .article-title {
-            font-size: 38px;
-            line-height: 1.2;
-        }
-
-        .article-meta {
-            font-size: 16px;
-            opacity: 0.85;
-        }
-
-        .article:nth-child(1) .article-meta,
-        .article:nth-child(2) .article-meta {
-            font-size: 20px;
+            font-size: 44px;
+            line-height: 1.15;
         }
 
         .article a {
@@ -98,12 +96,12 @@
     </style>
 </head>
 <body>
+    <div class="header">News from AAU Update</div>
     <div class="grid">
         <div class="article">
             <img src="https://www.aaudxp-cms.aau.dk/media/4xzlnzdt/prodekan-olav-geil-med-prisen.jpg?width=800" alt="From leadership to immersion: Olav Geil returns to research" loading="lazy" onerror="this.src='https://www.en.update.aau.dk/media/aau-logo.png'">
             <div class="article-overlay">
                 <h2 class="article-title">From leadership to immersion: Olav Geil returns to research</h2>
-                <div class="article-meta">update.aau.dk &bull; 06.01.2026</div>
             </div>
             <a href="https://www.en.update.aau.dk/from-leadership-to-immersion-olav-geil-returns-to-research-n158061" target="_blank" rel="noopener"></a>
         </div>
@@ -111,7 +109,6 @@
             <img src="https://www.aaudxp-cms.aau.dk/media/heulfwxk/jkk2_16_9_web.jpg?width=800" alt="New head of department: The Department of Clinical Medicine at AAU must be a strong, competent and credible partner" loading="lazy" onerror="this.src='https://www.en.update.aau.dk/media/aau-logo.png'">
             <div class="article-overlay">
                 <h2 class="article-title">New head of department: The Department of Clinical Medicine at AAU must be a strong, competent and credible partner</h2>
-                <div class="article-meta">update.aau.dk &bull; 05.01.2026</div>
             </div>
             <a href="https://www.en.update.aau.dk/new-head-of-department-the-department-of-clinical-medicine-at-aau-must-be-a-strong-competent-and-credible-partner-n157961" target="_blank" rel="noopener"></a>
         </div>
@@ -119,7 +116,6 @@
             <img src="https://www.aaudxp-cms.aau.dk/media/tuan4o1u/2.jpg?width=800" alt="AI and blood pressure monitoring to prevent stroke in the most vulnerable" loading="lazy" onerror="this.src='https://www.en.update.aau.dk/media/aau-logo.png'">
             <div class="article-overlay">
                 <h2 class="article-title">AI and blood pressure monitoring to prevent stroke in the most vulnerable</h2>
-                <div class="article-meta">update.aau.dk &bull; 31.12.2025</div>
             </div>
             <a href="https://www.en.update.aau.dk/ai-and-blood-pressure-monitoring-to-prevent-stroke-in-the-most-vulnerable-n158212" target="_blank" rel="noopener"></a>
         </div>
@@ -127,7 +123,6 @@
             <img src="https://www.aaudxp-cms.aau.dk/media/tihlrrua/aau_human_240619_00217-800px.jpg?width=800" alt="Expand your horizons: Attend the Danish University Extension – Folkeuniversitetet – for free" loading="lazy" onerror="this.src='https://www.en.update.aau.dk/media/aau-logo.png'">
             <div class="article-overlay">
                 <h2 class="article-title">Expand your horizons: Attend the Danish University Extension – Folkeuniversitetet – for free</h2>
-                <div class="article-meta">update.aau.dk &bull; 18.12.2025</div>
             </div>
             <a href="https://www.en.update.aau.dk/expand-your-horizons-attend-the-danish-university-extension-folkeuniversitetet-for-free-n157729" target="_blank" rel="noopener"></a>
         </div>
@@ -135,7 +130,6 @@
             <img src="https://www.aaudxp-cms.aau.dk/media/j5og2arm/img_9609-16-9-web.jpg?width=800" alt="AAU Startup Grant Winners Celebrated" loading="lazy" onerror="this.src='https://www.en.update.aau.dk/media/aau-logo.png'">
             <div class="article-overlay">
                 <h2 class="article-title">AAU Startup Grant Winners Celebrated</h2>
-                <div class="article-meta">update.aau.dk &bull; 18.12.2025</div>
             </div>
             <a href="https://www.en.update.aau.dk/aau-startup-grant-winners-celebrated-n157787" target="_blank" rel="noopener"></a>
         </div>
@@ -143,7 +137,6 @@
             <img src="https://www.aaudxp-cms.aau.dk/media/lvtlubvf/kresten-laust-faaborg-sckerl.jpg?width=800" alt="From volunteer to frontrunner: Kresten will represent all students at AAU" loading="lazy" onerror="this.src='https://www.en.update.aau.dk/media/aau-logo.png'">
             <div class="article-overlay">
                 <h2 class="article-title">From volunteer to frontrunner: Kresten will represent all students at AAU</h2>
-                <div class="article-meta">update.aau.dk &bull; 17.12.2025</div>
             </div>
             <a href="https://www.en.update.aau.dk/from-volunteer-to-frontrunner-kresten-will-represent-all-students-at-aau-n157299" target="_blank" rel="noopener"></a>
         </div>
